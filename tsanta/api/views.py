@@ -35,7 +35,6 @@ def check_slug(request):
     return Response(ans_serializer.data)
 
 
-
 class GroupView(APIView):
 
     def get(self, request):
