@@ -1,0 +1,26 @@
+{
+  "name": "tsanta",
+  "version": "0.0.1",
+  "description": "Система Тайный Санта для Тайного Санты",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sapunov/tsanta.git"
+  },
+  "keywords": [
+    "python"
+  ],
+  "author": "Nikita Sapunov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sapunov/tsanta/issues"
+  },
+  "homepage": "https://github.com/Sapunov/tsanta#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-less": "^3.3.2",
+    "gulp-minify": "^1.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0"
+  }
+}
