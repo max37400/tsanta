@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="welcome-text">
+    <h2>Зарегистрируйтесь и станьте Тайным Сантой,
+        <br>получите и подарите подарок!</h2>
+</div>
+<div class="results" id="se-results" style="margin-bottom:50px;">
+</div>
+<div class="change_uni">
+    <form action="#" onsubmit="return changeUni(this);">
+        <h3>Введите аббревиатуру вашего вуза:</h3>
+        <input type="text" placeholder="Аббревиатура вашего вуза..." autofocus name="vuz" autocomplete=off>
+        <div class="but-wrap welcome-but">
+            <button class="main-button">Зарегистрироваться</button>
+        </div>
+    </form>
+</div>
+{% endblock content %}

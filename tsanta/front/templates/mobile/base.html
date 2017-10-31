@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="/favicon-v3.ico" type="image/x-icon">
+<link rel="icon" href="/favicon-v3.ico" type="image/x-icon">
+<meta property="og:image" content="/static/images/olen3.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="description" content="Тайный Санта — зарегистрируйся и стань Тайным Сантой, получи и подари подарок!" />
+<meta property="og:title" content="Тайный Санта — получи и подари подарок!" />
+<meta property="og:description" content="Тайный Санта — зарегистрируйся и стань Тайным Сантой, получи и подари подарок!"
+/>
+<title>Тайный Санта
+    <?php echo (isset($univer)) ? "в ".$univer: "";?>
+</title>
+<script async src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/static/styles/css/styles.mobile.min.css?<?php echo mt_rand(4000,19999);?>" />
+<link href="http://fonts.googleapis.com/css?family=Roboto:400,300,100&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+<!-- Yandex.Metrika counter -->
+<!-- <script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function () {
+            try {
+                w.yaCounter27095231 = new Ya.Metrika({
+                    id: 27095231,
+                    webvisor: true,
+                    clickmap: true,
+                    trackLinks: true,
+                    accurateTrackBounce: true
+                });
+            } catch (e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript>
+    <div>
+        <img src="//mc.yandex.ru/watch/27095231" style="position:absolute; left:-9999px;" alt="" />
+    </div>
+</noscript> -->
+<!-- END OF - Yandex.Metrika counter -->
+</head>
+
+<body>
+    <main class="area">
+        <header class="global-header">
+            <div class="logo-santa">
+                <img src="/static/images/logo.png" alt="logo">
+            </div>
+        </header>
+         {% block content %}{% endblock %}
+        <footer class="global-footer">
+            <div class="social-share clearfix">
+                <p>Волшебство Нового года, подарков, тепла коснется студенческой жизни твоего университета!
+                    <br>Дарите подарки! Получайте подарки!
+                    <br>Знакомьтесь с яркими людьми внутри своего вуза!
+                    <br>
+                </p>
+                <p class="repost-text">
+                    <b>Рассказывай друзьям, делай репост:</b>
+                </p>
+                <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki"
+                    data-yashareTheme="counter"></div>
+            </div>
+            <div class="line"></div>
+            <div class="orgi clearfix" title="Школа Тренинга">
+                <a href="http://vk.com/shthse" target="blank" class="left">
+                    <img src="/static/images/logosht2.png" alt="">
+                </a>
+                <div class="orgi-text left">
+                    <b>Организаторы:</b>
+                    <br>Студорганизация НИУ ВШЭ
+                    <br>Школа Тренинга</div>
+            </div>
+        </footer>
+    </main>
+    <script type="text/javascript" async src="/static/scripts/common.min.js"></script>
+    <script type="text/javascript" async src="/static/scripts/script.min.js?v=11"></script>
+    <script type="text/javascript" async src="//yastatic.net/share/share.js" charset="utf-8"></script>
+</body>
+
+</html>

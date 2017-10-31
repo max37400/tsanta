@@ -36,8 +36,8 @@ ROOT_URLCONF = 'tsanta.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'panel/templates')],
-        'APP_DIRS': False,
+        # 'DIRS': [os.path.join(BASE_DIR, 'panel/templates')],
+        'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
