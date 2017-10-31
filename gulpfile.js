@@ -2,8 +2,9 @@ var gulp = require('gulp');
 
 var less = require('gulp-less');
 var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
+var minify = require('gulp-minify');
 var rename = require('gulp-rename');
+var cleancss = require('gulp-clean-css');
 
 var base = 'tsanta/front/static/';
 
@@ -14,15 +15,27 @@ var js_directory = base + 'js/';
 gulp.task('front-less-standalone', function() {
 	return gulp.src(less_directory + 'scaffolding.less')
 		.pipe(less())
-		.pipe(rename('styles.css'))
-		.pipe(gulp.dest('tsanta/front/static/styles'))
+		.pipe(rename('styles.min.css'))
+		.pipe(cleancss())
+		.pipe(gulp.dest('tsanta/front/static/styles'));
 });
 
 gulp.task('front-less-mobile', function () {
 	return gulp.src(less_directory + 'scaffolding.mobile.less')
 		.pipe(less())
-		.pipe(rename('styles.mobile.css'))
-		.pipe(gulp.dest('tsanta/front/static/styles'))
+		.pipe(rename('styles.mobile.min.css'))
+		.pipe(cleancss())
+		.pipe(gulp.dest('tsanta/front/static/styles'));
+});
+
+gulp.task('front-js-minify', function() {
+	return gulp.src(js_directory + '*.js')
+		.pipe(minify({
+			ext: {
+				min: '.min.js'
+			}
+		}))
+		.pipe(gulp.dest(js_directory));
 });
 
 gulp.task('front-less', ['front-less-standalone', 'front-less-mobile']);
