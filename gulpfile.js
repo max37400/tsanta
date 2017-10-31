@@ -27,6 +27,6 @@ gulp.task('front-less-mobile', function () {
 
 gulp.task('front-less', ['front-less-standalone', 'front-less-mobile']);
 
-gulp.task('front-less-watch', function() {
+gulp.task('front-less-watch', ['front-less'], function() {
 	gulp.watch(less_directory + '**/*.less', ['front-less']);
 });
